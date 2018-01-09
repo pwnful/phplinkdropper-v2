@@ -1,0 +1,29 @@
+<table width="98%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+    <td><? echo display_comment_item($itemid,$template_directory,$base_url,$default_user,$rewrite,$trackclicks,$default_image);?></td>
+  </tr>
+  <tr>
+    <td><? echo get_comments($base_url,$itemid,$template_directory,$max_comments);?></td>
+  </tr>
+  <tr>
+    <td align="left" style="padding-left:15px;">
+        
+        <? if ($member_comment==0 || ($member_comment==1 && $_SESSION['loggedin']==1)){?>    
+        <form name="form1" method="post" action="<?=$base_url;?>index.php">
+          <b>Add Your Comment</b><br>
+          <textarea name="comment" cols="40" rows="5" id="comment"></textarea>
+          <br>
+          <br><input name="cid" type="hidden" value="<? echo $itemid;?>">
+          <? if (!empty($_SESSION['status'])){ echo "<b>".$_SESSION['status']."</b>"; $_SESSION['status']="";}?>
+          <div align="right" style="padding-right:5px;"><input type="submit" name="Submit" value="Add Comment"></div>
+        </form>    
+        <?}else{?>
+        
+        You must <b>LOGIN</b> or <b>REGISTER</b> to leave a comment.
+        
+        
+        <?}?>
+    
+    </td>
+  </tr>
+</table>

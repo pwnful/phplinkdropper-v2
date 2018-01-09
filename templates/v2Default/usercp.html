@@ -1,0 +1,22 @@
+<font color="yellow">Welcome <? echo $_SESSION['loggedinuser'];?>!</font><br/>
+
+<? if ($rewrite ==1){?>
+- <a href="<? echo $base_url;?>Submit-Item.html" class="UserCP">SUBMIT</a><br/>
+- <a href="<? echo $base_url;?>User-Stats.html" class="UserCP">Stats</a><br/>
+- <a href="<? echo $base_url;?>Manage-Domains.html" class="UserCP">Manage Domains</a><br/>
+- <a href="<? echo $base_url;?>Change-Password.html" class="UserCP">Change Password</a><br/>
+- <a href="<? echo $base_url;?>Logoff.html" class="UserCP">Logoff</a><br/>
+
+<?}else{?>
+- <a href="<? echo $base_url;?>index.php?action=submititem" class="UserCP">SUBMIT</a><br/>
+- <a href="<? echo $base_url;?>index.php?action=userstats" class="UserCP">Stats</a><br/>
+- <a href="<? echo $base_url;?>index.php?action=domains" class="UserCP">Manage Domains</a><br/>
+- <a href="<? echo $base_url;?>index.php?action=changepw" class="UserCP">Change Password</a><br/>
+- <a href="<? echo $base_url;?>index.php?action=logoff" class="UserCP">Logoff</a><br/>
+
+
+
+
+
+
+<?}?>

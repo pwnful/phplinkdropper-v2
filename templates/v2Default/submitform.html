@@ -1,0 +1,47 @@
+<? if ($_SESSION['nosubmit'] !=1){?>
+<!--- Submission Form Begin --->
+<form id="contentsubmission" name="contentsubmission" method="post" enctype="multipart/form-data" action="<?=$base_url;?>index.php">
+  <span class="submitformtext">
+  <b>Submit New Item</b><br/><br/>
+  
+    Item Title: 
+    <input name="contenttitle" type="text" id="contenttitle" style="font-family: Arial; color: #FFE63E; font-size: 10px; border: 1px solid #FFFFFF; background-color: #000000" value="Title?" size="50" maxlength="75">
+    <br/><br/>
+    Item Description:<br/>
+    <textarea name="contentdescription" cols="60" rows="5" wrap="VIRTUAL" style="font-family: Arial; color: #FFE63E; font-size: 10px; border: 1px solid #FFFFFF; background-color: #000000" ></textarea>
+    <br/><br/>
+    URL: 
+    <input name="contenturl" type="text" id="contenturl" style="font-family: Arial; color: #FFE63E; font-size: 10px; border: 1px solid #FFFFFF; background-color: #000000" value="http://" size="50">
+    <br/><br/>
+    or URL to thumbnail: <input name="thumburl" type="text" id="thumburl" style="font-family: Arial; color: #FFE63E; font-size: 10px; border: 1px solid #FFFFFF; background-color: #000000" value="http://" size="50"><br/>
+    <i>(note: must be in JPEG format and no larger than )</i>
+    <br/><br/>
+    Upload Thumbnail: 
+    <input type="file" name="userfile" style="font-family: Arial; color: #FFE63E; font-size: 10px; border: 1px solid #FFFFFF; background-color: #000000" size="30"><br/>
+    <i>(note: must be in JPEG format and no larger than )</i>
+    <br/><br/>
+    &nbsp;&nbsp;<select name="category" style="font-family: Arial; font-size: 10px; color: #FFE63E; padding: 2px; border: 1px solid #FFFFFF; background-color: #000000">
+    <option value="0" selected>Select Type</option>
+    <? echo submit_category_list();?>
+    </select>
+    &nbsp;<input name="Submit" type="submit" id="Submit" style="font-family: Arial; font-size: 10px; color: #FFE63E; border: 1px solid #FFFFFF; background-color: #000000" value="Submit" />
+              <br/>
+    <font color="red"><? if(!empty($_SESSION['submitstatus'])){ echo $_SESSION['submitstatus']."<br/>"; $_SESSION['submitstatus']="";}?></font>
+  </span>
+</form>	
+<!--- Submission Form End --->
+<?}?>
+<br/>
+<? if ($_SESSION['loggedin']==1){?>
+<b>Current User Stats</b><br/><br/>
+HITS IN: <? echo $hitsin;?> (Required: <? echo $_SESSION['minhits'];?>)<br/>
+HITS OUT: <? echo $hitsout;?><br/>
+Ratio: <? echo $hitsratio;?>% (Required: <? echo $_SESSION['ratio'];?>%)<br/>
+Points: <? echo $userpoints;?> (Required: <? echo $_SESSION['minpoints'];?>)	
+<?}?>
+
+<? if ($nosubmit ==1){?>
+<br/><br/>
+<b>You are currently below the minimum requirements to submit an item.</b>
+
+<?}?>

@@ -1,0 +1,31 @@
+<table width="98%" border="0" align="center" cellpadding="4" cellspacing="0">  
+  <tr>
+    <td class="DefaultText">Trade Links With <?=$sitename;?></td>
+  </tr>
+  <tr>
+    <td class="DefaultText">We want to trade traffic with you! All you have to do is sign up and send us some hits to the UNIQUE URL we will provide you and you will get listed right away! Our trade program automatically detects the hits coming from your site. The more hits you send us, the higher you climb up the auto-ranked list on the front page of the website!<br>
+      Sign up today!<BR><BR>
+      <form name="formTradeLinks" method="post" action="index.php?action=linkadded">
+      Website Name: 
+      <input name="websitename" type="text" id="websitename" size="30" maxlength="30">
+      <BR>
+      Do Not Include HTTP or WWW. (i.e. Yahoo! would be fine - As this is the title of your website)
+      <BR><BR>
+      Website URL: 
+      <input name="websiteurl" type="text" id="websiteurl" value="http://" size="30">
+      <BR>
+      Make sure to keep the http:// in front of your URL (i.e. http://www.yahoo.com)
+      <BR><BR>
+      Description: 
+      <input name="websitedescription" type="text" id="websitedescription" value="" size="30" maxlength="50">
+      <BR><BR>
+      E-Mail Address:
+      <input name="emailaddress" type="text" id="emailaddress" size="30">
+      <BR><BR>
+      <? if (isset($_SESSION['submitstatus'])){echo "<B>".$_SESSION['submitstatus']."</B><BR><BR>"; $_SESSION['submitstatus']="";}?>
+          <input type="submit" name="Submit" value="Submit Link">
+      	</form>
+    </td>
+  </tr>
+
+</table>

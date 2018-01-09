@@ -1,0 +1,14 @@
+<form name="ChangePW" method="post" action="<?echo $base_url;?>index.php">
+  <div align="center"><span class="defaultText">Please fill out of following to change your password.<br/> 
+    <br />
+  Enter New Password: 
+  <input name="newpw1" type="password" id="newpw1"><br/><br/>
+  Re-Enter New Password: 
+  <input name="newpw2" type="password" id="newpw2"><br/><br/>
+  <br />
+  <br />
+  <? if (!empty($_SESSION['status'])) echo "<b>".$_SESSION['status']."</b><br/>"; $_SESSION['status']="";?>
+  
+  <input type="submit" name="Submit" value="Change My Password">
+  </div>
+</form>

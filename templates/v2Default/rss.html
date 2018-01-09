@@ -1,0 +1,19 @@
+<table width="98%"  border="0" cellspacing="0" cellpadding="3">
+  <tr>
+    <td>
+    
+        <span class="DefaultText">Really Simple Syndication (RSS) is an XML-based format for content distribution (more). <?=$sitenam;?> offers RSS feeds with content titles and descriptions to listings. Our feeds are constantly updated.<BR><BR>
+        <B>Main Feeds:</B><BR>
+            - Newest Content <a href="<?=$base_url;?>rss.php?type=newest_content&limit=15" title="Click to see the Newest Content RSS Feed"><img src="<?=$base_url;?>images/newest-content-rss.jpg" border="0"></a><BR>
+            - Most Popular Content <a href="<?=$base_url;?>rss.php?type=most_popular&limit=15" title="Click to see the Most Popular Content RSS Feed"><img src="<?=$base_url;?>images/most-popular-rss.jpg" border="0"></a><BR>
+            - Random Content <a href="<?=$base_url;?>rss.php?type=random_content&limit=15" title="Click to see the Random Content RSS Feed"><img src="<?=$base_url;?>images/random-content-rss.jpg" border="0"></a><BR>    
+        <BR>
+        <B>Category Specific Feeds:</B><BR>
+        <?=list_category_feeds($base_url,$trackclicks,$rewrite);?>
+        </span>
+    
+    
+    </td>
+  </tr>
+</table>
+

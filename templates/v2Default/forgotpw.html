@@ -1,0 +1,12 @@
+<form name="ForgotPW" method="post" action="<?echo $base_url;?>index.php">
+  <div align="center"><span class="defaultText">Please enter your email address below</span> and a new password will be sent to you.<br /> 
+    <br />
+  E-Mail Address: 
+  <input name="forgotpwemail" type="text" id="forgotpwemail">
+  <br />
+  <br />
+  <? if (!empty($_SESSION['status'])) echo "<b>".$_SESSION['status']."</b><br/>"; $_SESSION['status']="";?>
+  
+  <input type="submit" name="Submit" value="Recover My Password">
+  </div>
+</form>

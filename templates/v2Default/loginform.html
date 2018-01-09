@@ -1,0 +1,27 @@
+        <!--- Login Form Begin --->
+        <font style="font-family: Arial; color: white; font-size: 11px;"><? if(!empty($_SESSION['loginstatus'])) {echo $_SESSION['loginstatus']; $_SESSION['loginstatus']="";}?></font>      
+        
+			 <form id="loginform" name="loginform" method="post" action="<?=$base_url;?>index.php?action=login">
+		    <table width="98%" border="0" cellspacing="0" cellpadding="3">
+          <tr>
+            <td  align="right" valign="middle"><span class="submitformtext"><span class="style11">
+              User Login</span></td>
+          </tr>
+          <tr>
+            <td  align="right" valign="middle"><span class="submitformtext">
+              <input name="loginuser" type="text" id="loginuser" style="font-family: Arial; color: #FFE63E; font-size: 10px; border: 1px solid #000000; background-color: #000000" value="Username" size="35" maxlength="75"></span></td>
+          </tr>
+          <tr>
+            <td  align="right" valign="middle"><span class="submitformtext">
+              <input name="loginpassword" type="password" id="loginpassword" style="font-family: Arial; color: #FFE63E; font-size: 10px; border: 1px solid #000000; background-color: #000000" value="http://" size="35"></td>
+          </tr>
+           <tr>
+            <td align="right" valign="middle" class="submitformtext">
+            <font style="font-family: Arial; font-size: 10px; color: gray">Remember Me</font> <input type="checkbox" name="saveme" value="1"> <br/><br/><input name="Submit" type="submit" id="Submit" style="font-family: Arial; font-size: 10px; color: #FFE63E; border: 1px solid #000000; background-color: #000000" value="Login" /></td>
+          </tr>
+          <tr>
+            <td align="center" class="warningtext submitformtext"><em><? if (!empty($_SESSION['status'])) echo $_SESSION['status']; $_SESSION['status'] = "";?></em></td>
+          </tr>
+        </table>
+      </form>		
+<!--- Login Form End --->	

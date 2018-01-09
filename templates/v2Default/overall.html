@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title><?=$pagetitle;?> - <?=$sitename;?></title>
+<META name="description" content="<?=$sitedescription;?>"> 
+<meta name="keywords" content="<?=$sitekeywords;?>">
+
+<style type="text/css">
+<!--
+body
+{
+	text-align:center;
+	background: #838383 url(./templates/<? echo $template_directory;?>/images/page-background.jpg) repeat-x top;
+	margin: 0;
+	padding: 0;
+
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+	color: #000000;
+}
+.media {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: none;
+	font-size: 12px;
+	color: black;
+}
+
+.DefaultText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: none;
+	font-size: 12px;
+	color: black;
+}
+.PageNumbers {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: none;
+	font-size: 11px;
+	color: black;
+}
+
+.warningtext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+
+.welcometext {
+	color: #656567;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.mostpopular {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.phpLDFooter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+.linkText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: none;
+	font-size: 12px;
+	color: black;
+}
+
+a.LoginStatus:link {color: white; text-decoration: underline; font-weight: bold;}
+a.LoginStatus:visited {color: white; text-decoration: underline; }
+a.LoginStatus:hover {color: yellow; text-decoration: underline; }
+a.LoginStatus:active {color: white; }
+
+a.UserCP:link {color: white; text-decoration: underline; font-weight: bold;}
+a.UserCP:visited {color: white; text-decoration: underline; }
+a.UserCP:hover {color: yellow; text-decoration: underline; }
+a.UserCP:active {color: white; }
+
+a.phpLDFooter:link {color: #FFFFFF; text-decoration: none; font-weight: bold;}
+a.phpLDFooter:visited {color: gray; text-decoration: none; }
+a.phpLDFooter:hover {color: yellow; text-decoration: underline; }
+a.phpLDFooter:active {color: #FFFFFF; }
+
+a.plugs:link {color: #FFFFFF; text-decoration: none; font-weight: bold;}
+a.plugs:visited {color: gray; text-decoration: none; }
+a.plugs:hover {color: yellow; text-decoration: none; }
+a.plugs:active {color: #FFFFFF; }
+
+
+a.mostpopular:link {color: #656567; text-decoration: none; font-weight: bold;}
+a.mostpopular:visited {color: gray; text-decoration: none; }
+a.mostpopular:hover {color: yellow; text-decoration: underline; }
+a.mostpopular:active {color: #656567; }
+
+a.LinksPage:link {color: blue; text-decoration: none; font-weight: bold;}
+a.LinksPage:visited {color: blue; text-decoration: none; }
+a.LinksPage:hover {color: blue; text-decoration: underline; }
+a.LinksPage:active {color: blue; }
+
+a.TopLinks:link {color: #656567; text-decoration: none; font-weight: bold;}
+a.TopLinks:visited {color: gray; text-decoration: none; }
+a.TopLinks:hover {color: yellow; text-decoration: underline; }
+a.TopLinks:active {color: #656567; }
+
+a.featured:link {color: white; text-decoration: none; text-transform: Uppercase; font-weight: bold;}
+a.featured:visited {color: white; text-decoration: none; }
+a.featured:hover {color: white; text-decoration: underline; }
+a.featured:active {color: white; }
+
+a.PageNumbers:link {color: black; text-decoration: none; text-transform: Uppercase; font-weight: bold;}
+a.PageNumbers:visited {color: black; text-decoration: none; }
+a.PageNumbers:hover {color: black; text-decoration: underline; }
+a.PageNumbers:active {color: black; }
+
+a.media:link {color: black; text-decoration: none; text-transform: none; font-weight: bold;}
+a.media:visited {color: black; text-decoration: none; text-transform: none; font-weight: bold;}
+a.media:hover {color: black; text-decoration: underline; }
+a.media:active {color: black; } 
+
+.style1 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+.style2 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style3 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+.style7 {color: #FFFFFF}
+.style8 {font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #FFFFFF; }
+.style9 {font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; }
+.style11 {font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<table width="740" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="3" bgcolor="#000000"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="374"><a href="<?=$base_url;?>"><img src="<? echo $base_url;?>templates/<? echo $template_directory;?>/images/phpLDLogo.gif" width="375" border="0"></a></td>
+            <td width="366" align="center" valign="middle">
+<form id="contentsearch" name="contentsearch" method="post" action="<?=$base_url;?>index.php">
+<input name="t" type="text" id="t" style="font-family: Arial; color: #FAF100; font-size: 10px; border: 1px solid #666666; background-color: #000000" value="Search For" size="35" maxlength="75">&nbsp;<input name="Submit" type="submit" id="Submit" style="font-family: Arial; font-size: 10px; color: #FAF100; border: 1px solid #C0C0C0; background-color: #000000" value="Search Content" /><? if (!empty($_SESSION['searchstatus'])) echo "<br/><em>".$_SESSION['searchstatus']."</em>"; $_SESSION['searchstatus'] = "";?>
+</form>		
+			
+
+			
+			
+			</td>
+          </tr>
+        </table></td>
+        </tr>
+      <tr>
+        <td width="374" valign="top" bgcolor="#FFFFFF">
+        
+        <? if(!empty($includecontent)) echo $includecontent; if(!empty($includefile)) include($includefile);?>
+
+		</td>
+        <td width="183" valign="top" bgcolor="#00FF80">
+        </td>
+        <td width="183" align="center" valign="top" bgcolor="#003333">
+        <font color="#FFFFFF"><? echo online_users();?> users online!</font><br/><br/>
+        <?=cat_jump_list($rewrite,$base_url);?>
+
+<? 
+
+// If the user is not logged in, then load the login form
+if ($_SESSION['loggedin']!=1 && $member_login==1)	
+  include ("./templates/$template_directory/loginform.html");
+
+// If the user is logged in, then load the user control panel template
+elseif ($_SESSION['loggedin']==1 && $member_login==1)	
+  include ("./templates/$template_directory/usercp.html");
+  
+?>
+		
+		
+		
+		<br/>
+		<img src="<? echo $base_url;?>templates/<? echo $template_directory;?>/images/most-popular.gif" width="160" border="0"><br/>
+		<? echo most_popular($base_url,$trackclicks,$frameout,$rewrite,$default_image,$template_directory,8);?>
+<br/>  
+		<img src="<? echo $base_url;?>templates/<? echo $template_directory;?>/images/top-links.gif" width="160" border="0"><br/>
+		<? echo display_top_links($base_url,$sorttoplinks,$maxtoplinks,$realurl);?>
+    <BR>     
+<!--- Begin Listing RSS Feed Icons --->
+    <a href="<?=$base_url;?>rss.php?type=newest_content&limit=15" title="Click to see the Newest Content RSS Feed"><img src="<? echo $base_url;?>templates/<? echo $template_directory;?>/images/newest-content-rss.jpg" border="0"></a><BR>
+    <a href="<?=$base_url;?>rss.php?type=most_popular&limit=15" title="Click to see the Most Popular Content RSS Feed"><img src="<? echo $base_url;?>templates/<? echo $template_directory;?>/images/most-popular-rss.jpg" border="0"></a><BR>
+    <a href="<?=$base_url;?>rss.php?type=random_content&limit=15" title="Click to see the Random Content RSS Feed"><img src="<? echo $base_url;?>templates/<? echo $template_directory;?>/images/random-content-rss.jpg" border="0"></a><BR>    
+    <a href="<?=$base_url;?>index.php?action=rss" title="Click to see the More RSS Feeds"><img src="<? echo $base_url;?>templates/<? echo $template_directory;?>/images/more-feeds-rss.jpg" border="0"></a><BR>    
+<!--- End Listing RSS Feed Icons --->    
+    
+    </td>
+      </tr>
+      <tr align="right">
+        <td height="20" colspan="3" bgcolor="#000000"><span class="style6">Powered by phpLinkDropper v2.0&nbsp;</span></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

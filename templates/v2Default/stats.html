@@ -1,0 +1,48 @@
+<?
+
+/*
+script: stats.html
+purpose: This is the html page for the statistics box.
+copyright: copyright 2005-2006 phpArcadeScript. All Rights Reserved. You may modify this file for use on your
+					site running a licenced copy of phpArcadeScript.
+					You must not distribute this file or derivations of it.
+support: www.phparcadescript.com
+
+*/
+
+
+
+
+
+
+?>
+
+		<div class="small_sections">
+			<div class="small_section_headers">
+			Arcade Statistics
+			</div>
+		  <div style="padding:4px;">
+
+Total Games: <?=$_SESSION['total_games'];?><br />
+                   Played Today: <?=$_SESSION['played_today'];?><br />
+                   Overall Played: <?=$_SESSION['total_played'];?><br />
+                
+                <?
+                if ($member_login == 1)
+                  {
+                ?>
+                   Total Members: <?=$_SESSION['total_users'];?><br />
+                   Newest Member: <?=$_SESSION['newest_member'];?><br />
+                <?
+                  }
+                ?>
+                  Total Users Online: <? echo $_SESSION['total_online_users'];?>
+                  <br />
+                
+                  <? echo $_SESSION['online_users'];?><br/>
+                  (<? echo $_SESSION['total_members'];?> members and <? echo $_SESSION['total_guests'];?> guests)
+
+
+		  </div>
+		
+		</div>

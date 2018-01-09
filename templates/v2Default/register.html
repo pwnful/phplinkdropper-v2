@@ -1,0 +1,18 @@
+                <b><? if (isset($_SESSION['status'])){echo $_SESSION['status']."<br/>"; $_SESSION['status']="";}?></b>
+                  <form name="form1" method="post" action="index.php?action=newmember">
+                    Username: 
+                        <input name="newusername" type="text" id="newusername">
+                    <br /><br />
+                    Password: 
+                        <input name="newpasswordone" type="password" id="newpasswordone">
+                    <br /><br />
+                    Re-Type Password: 
+                        <input name="newpasswordtwo" type="password" id="newpasswordtwo">
+                    <br /><br />
+                    E-Mail Address: 
+                        <input name="newemailaddress" type="text" id="newemailaddress">
+                    <br />
+                        A confirmation e-mail will be sent to your e-mail address before you will be able to user your account.
+                    <br /><br />
+                      <input type="submit" name="Submit" value="Register"><br />               
+                  </form>
