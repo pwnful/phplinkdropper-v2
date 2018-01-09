@@ -1,0 +1,22 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^media/([^/.]*)/?/([_A-Za-z0-9-]+).html/?$ itemout.php?id=$1
+RewriteRule ^plug/([^/.]*)/?/([_A-Za-z0-9-]+).html/?$ plugout.php?id=$1
+RewriteRule ^Report/([^/.]*)/?$ itemout.php?report=$1
+RewriteRule ^search-results/([^/.]*)/?/([_A-Za-z0-9-]+).html/?$ index.php?action=search&id=$1
+RewriteRule ^search-results/([^/.]*)/?/([0-9]+)-([0-9]+)/?/([_A-Za-z0-9-]+).html/?$ index.php?action=search&id=$1&page=$2&limit=$3
+RewriteRule ^categories/([^/.]*)/?/([_A-Za-z0-9-]+).html/?$ index.php?c=$1
+RewriteRule ^categories/([^/.]*)/?/([0-9]+)-([0-9]+)/?/([_A-Za-z0-9-]+).html/?$ index.php?c=$1&page=$2&limit=$3
+RewriteRule ^archive/([0-9]+)-([0-9]+)/?$ index.php?page=$1&limit=$2 [S=1]
+RewriteRule ^Register.html/?$ index.php?action=register
+RewriteRule ^Manage-Domains.html/?$ index.php?action=domains
+RewriteRule ^Delete-Domain-([0-9]+).html/?$ index.php?action=deletedomain&id=$1
+RewriteRule ^comments/([^/.]*)/?/([_A-Za-z0-9-]+).html/?$ index.php?action=comments&id=$1
+RewriteRule ^Account-Confirmed.html/?$ index.php?action=accountconfirmed
+RewriteRule ^confirm-account/([_A-Za-z0-9-]+)/?/([_A-Za-z0-9-]+).html/?$ index.php?action=confirmaccount&username=$2&confirmation=$1
+RewriteRule ^Submit-Item.html/?$ index.php?action=submititem
+RewriteRule ^User-Stats.html/?$ index.php?action=userstats
+RewriteRule ^Manage-Domains.html/?$ index.php?action=domains
+RewriteRule ^Change-Password.html/?$ index.php?action=changepw
+RewriteRule ^Logoff.html/?$ index.php?action=logoff
+RewriteRule ^Forgot-Password.html/?$ index.php?action=forgotpw
